@@ -1,0 +1,23 @@
+.notification {
+  padding: 20px;
+  width: fit-content;
+  color: white;
+  font-weight: bold;
+  background-color: #59c93a60;
+  // border: 1px solid transparent;
+  border: none;
+  border-radius: 15px;
+  position: absolute;
+  left: 80%;
+  top: -100px;
+}
+
+.animate {
+  animation: move 5s;
+  @keyframes move {
+    from {top: -100px}
+    10% {top: 110px}
+    90% {top: 110px}
+    to {top: -100px}
+  }
+}

@@ -1,0 +1,49 @@
+.section-post {
+  &-header {
+
+    .title-wrapper{
+
+      .title {
+        font-size: 26px;
+        font-weight: bold;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .date {
+        font-size: 14px;
+        color: grey;
+        text-align: end;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-left: 50px;
+      flex-grow: 1;
+    }
+
+    display: flex;
+  }
+
+  &-content {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5rem;
+    margin-top: 40px;
+  }
+
+  button {
+    margin-top: 50px;
+    align-self: flex-end;
+  }
+
+  border: 2px solid #ECECEC;
+  border-radius: 5px;
+  padding: 50px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}

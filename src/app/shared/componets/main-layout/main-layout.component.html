@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="navigation main-content-wrapper">
+    <div [routerLink]="['/']" class="title">Personal Blog<span>.</span></div>
+    <div class="nav-items">
+      <div [routerLink]="['/about']" routerLinkActive="active" class="nav-item">About</div>
+      <div *ngIf="!authService.isLogedIn()" [routerLink]="['/admin', 'login']" routerLinkActive="active" class="nav-item">Login</div>
+      <div *ngIf="authService.isLogedIn()" [routerLink]="['/admin', 'dashboard']" routerLinkActive="active" class="nav-item">Admin Page</div>
+    </div>
+  </div>
+</div>
+
+<div class="main-content-wrapper">
+  <router-outlet></router-outlet>
+</div>

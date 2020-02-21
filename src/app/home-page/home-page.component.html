@@ -1,0 +1,12 @@
+<div *ngIf="isLoading" class="loader"></div>
+
+<div class="search">
+  <input type="text" class="search" [(ngModel)]="searchStr" placeholder="Search...">
+</div>
+
+<div *ngIf="posts">
+  <app-post
+    *ngFor="let post of posts | searchPost: searchStr"
+    [post]="post"
+  ></app-post>
+</div>

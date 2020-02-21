@@ -1,0 +1,48 @@
+<div *ngIf="isLoading" class="loader"></div>
+
+<form class="login-form" [formGroup]="form" (ngSubmit)="submit()">
+  <h2>Login to administrator page</h2>
+  <div class="form-control">
+    <label
+    [ngClass]="{validationerror: form.get('email').touched && form.get('email').invalid}"
+      for="email"
+    >Email:</label>
+    <input
+      id="email"
+      type="email"
+      formControlName="email">
+  </div>
+  <div
+    *ngIf="form.get('email').touched && form.get('email').invalid"
+    class="section-error"
+  >
+    <small>Enter Your email</small>
+  </div>
+  <div class="form-control">
+    <label
+      [ngClass]="{validationerror: form.get('password').touched && form.get('password').invalid}"
+      for="password"
+    >
+      Password:
+    </label>
+    <input id="password" type="password" formControlName="password">
+  </div>
+  <div
+    *ngIf="form.get('password').invalid && form.get('password').touched"
+    class="section-error"
+  >
+    <small
+      *ngIf="form.get('password').errors.required"
+    >Enter password</small>
+    <small
+      *ngIf="form.get('password').errors.minlength"
+    >Minimum password length is {{ form.get('password').errors.minlength.requiredLength }} characters.
+      Actual length: {{ form.get('password').errors.minlength.actualLength }}</small>
+  </div>
+  <div><small>v@mail.ru / 123456</small></div>
+  <div *ngIf="message" class="alert">{{ message }}</div>
+  <button type="submit" class="btn-main" [disabled]="form.invalid">Login</button>
+  <div *ngIf="auth.loginError" class="alert">
+    Inavlid login and/or passoword. Please try again.
+  </div>
+</form>

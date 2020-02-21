@@ -1,0 +1,13 @@
+<div *ngIf="isLoading" class="loader"></div>
+
+<div *ngIf="post$ | async as post" class="section-post">
+  <div class="section-post-header">
+    <div class="image"><img [src]="post.image"></div>
+    <div class="title-wrapper">
+      <div class="date">Added on: {{ post.date | dateConvert | date: 'short' }}</div>
+      <div class="title">{{ post.title }}</div>
+  </div>
+  </div>
+  <div class="section-post-content">{{ post.text }}</div>
+  <button (click)="backNav()" class="btn-main">Back</button>
+</div>

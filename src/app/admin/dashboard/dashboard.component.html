@@ -1,0 +1,28 @@
+<div *ngIf="isLoading" class="loader"></div>
+
+<div class="section-dashboard">
+  <div class="title">Administrator panel</div>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Post Title</th>
+        <th>Add date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="posts$ | async as posts">
+      <tr
+        *ngFor="let post of posts; index as i"
+      >
+        <td class="number">{{ i + 1 }}</td>
+        <td>{{ post.title }}</td>
+        <td class="date">{{ post.date | dateConvert | date: 'short' }}</td>
+        <td class="action">
+          <button (click)="navEdit(post.id)" class="btn-edit">Edit</button>
+          <button (click)="deletePost(post.id)" class="btn-delete">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

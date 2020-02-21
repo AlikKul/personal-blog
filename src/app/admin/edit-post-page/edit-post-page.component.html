@@ -1,0 +1,19 @@
+<div *ngIf="isLoading" class="loader"></div>
+
+<form class="new-post-form" [formGroup]="form" (ngSubmit)="submit()">
+  <input id="title" type="text" formControlName="title">
+  <div
+    *ngIf="form.get('title').touched && form.get('title').invalid"
+    class="alert"
+  >This field can't be empty</div>
+  <textarea id="text" formControlName="text"></textarea>
+  <div
+    *ngIf="form.get('text').touched && form.get('text').invalid"
+    class="alert"
+  >This field can't be empty</div>
+  <input id="image" type="text" formControlName="image">
+  <div class="buttons">
+    <button type="submit" [disabled]="form.invalid" class="btn-main">Done</button>
+    <button (click)="cancel()" class="btn-main">Cancel</button>
+  </div>
+</form>

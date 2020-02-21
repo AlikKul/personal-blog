@@ -1,0 +1,35 @@
+.login-form {
+  h2, button {
+    align-self: center;
+  }
+
+  button {
+    margin-top: 30px;
+  }
+
+  .form-control {
+    input, label {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    input {
+      margin-left: 10px;
+      border: 1px solid #ECECEC;
+      border-radius: 3px;
+    }
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 30px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 2px solid #ECECEC;
+  border-radius: 5px;
+  width: fit-content;
+  margin: 80px auto 0 auto;
+}

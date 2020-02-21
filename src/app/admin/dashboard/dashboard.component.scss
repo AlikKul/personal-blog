@@ -1,0 +1,43 @@
+.section-dashboard {
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  table {
+
+    .number {
+      text-align: center;
+    }
+
+    .date {
+      text-align: center;
+      width: 20%;
+    }
+
+    .action{
+      width: 25%;
+      text-align: center;
+      button + button {
+        margin-left: 10px;
+      }
+    }
+
+    width: 100%;
+  }
+
+  table, th, td {
+    padding: 5px;
+    border: 1px solid rgb(247, 247, 247);
+    border-collapse: collapse;
+    cursor: default;
+  }
+
+  tr:hover {
+    background-color: rgba(241, 241, 241, 0.5);
+  }
+
+  margin-top: 40px;
+}

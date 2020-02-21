@@ -1,0 +1,28 @@
+<app-notification></app-notification>
+
+<div class="wrapper">
+  <div class="navigation main-content-wrapper">
+    <div [routerLink]="['/']" class="title">Personal Blog<span>.</span></div>
+    <div class="nav-items">
+      <div [routerLink]="['']" class="nav-item">Home page</div>
+      <div
+        *ngIf="auth.isLogedIn()"
+        [routerLink]="['dashboard']"
+        routerLinkActive="active"
+        class="nav-item">Dashboard</div>
+      <div
+        *ngIf="auth.isLogedIn()"
+        [routerLink]="['newpost']"
+        routerLinkActive="active"
+        class="nav-item">New post</div>
+      <div
+        *ngIf="auth.isLogedIn()"
+        (click)="logout()"
+        class="nav-item">Log out</div>
+    </div>
+  </div>
+</div>
+
+<div class="main-content-wrapper">
+  <router-outlet></router-outlet>
+</div>

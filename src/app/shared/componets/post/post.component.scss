@@ -1,0 +1,40 @@
+.post {
+  .image-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 220px;
+    }
+  }
+
+  .content {
+    .title{
+      font-size: 28px;
+      font-weight: bold;
+      color: #4f4e4e;
+    }
+
+    .text{
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 1.5rem;
+      color: #606060;
+    }
+
+    button {
+      margin: 0 40px 0 auto;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 500px;
+  }
+
+  padding: 10px;
+  margin-top: 20px;
+  border: 2px solid #ECECEC;
+  border-radius: 5px;
+  display: flex;
+}

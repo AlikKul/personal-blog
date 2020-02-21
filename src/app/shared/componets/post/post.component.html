@@ -1,0 +1,10 @@
+<div class="post">
+  <div class="image-container">
+    <img [src]="post.image">
+  </div>
+  <div class="content">
+    <div class="title">{{ post.title }}</div>
+    <div class="text">{{ post.text | preview: 200 }}</div>
+    <button (click)="showPost()" class="btn-main">Continue Reading</button>
+  </div>
+</div>
